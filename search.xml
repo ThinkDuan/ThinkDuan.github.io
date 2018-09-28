@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>hexo创建文章，标签和分类</title>
+      <link href="/2018/09/04/hexo%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0%EF%BC%8C%E6%A0%87%E7%AD%BE%E5%92%8C%E5%88%86%E7%B1%BB/"/>
+      <url>/2018/09/04/hexo%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0%EF%BC%8C%E6%A0%87%E7%AD%BE%E5%92%8C%E5%88%86%E7%B1%BB/</url>
+      
+        <content type="html"><![CDATA[<p>这篇文章将帮助大家来设置文章的标签<br><a id="more"></a></p><h4 id="设置标签页"><a href="#设置标签页" class="headerlink" title="设置标签页"></a>设置标签页</h4><h5 id="进入当前文档目录-生成tag页面"><a href="#进入当前文档目录-生成tag页面" class="headerlink" title="进入当前文档目录,生成tag页面"></a>进入当前文档目录,生成tag页面</h5><blockquote><p>hexo new page tag</p></blockquote><h5 id="配置页面"><a href="#配置页面" class="headerlink" title="配置页面"></a>配置页面</h5><blockquote><p>在生成的index.md文件中增加 type: tag</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Daily </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+  
+  
+</search>
