@@ -1,7 +1,4 @@
 * Javascript
-  * Demo
+  * [Demo one](/Javascript/jsOne.md)
 * Git
 
-* CSS
-
-* HTML

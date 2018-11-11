@@ -17,7 +17,7 @@
       repo: 'https://github.com/ThinkDuan',
       loadSidebar: true,
       loadNavbar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 4,
       onlyCover: true,
       coverpage: true,
       auto2top: true,
@@ -25,7 +25,24 @@
         maxAge: 86400000,
         placeholder: '搜索文章内容',
 
-      }
+      },
+      plugins: [
+        function (hook,vm){
+          var footer = [
+                '<hr/>',
+                '<footer>',
+                '<span><a href="https://github.com/ThinkDuan">前端小镇</a> &copy;2017.</span>',
+                '</footer>'
+              ].join('');
+          hook.beforeEach(function (content){
+            console.log(content);
+            return content;
+          }),
+          hook.afterEach(function (html){
+            return html + footer
+          })
+        }
+      ]
     }
   </script>
   <script src="./_plugins/external-script.min.js"></script>
