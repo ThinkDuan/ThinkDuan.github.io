@@ -50,5 +50,29 @@
   <script src="./_plugins/emoji.min.js"></script>
   <script src="./_plugins/search.min.js"></script>
   <script src="./_plugins/zoom-image.min.js"></script>
+  <!-- 存储服务 -->
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
+  <!-- 实时消息服务 -->
+  <script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-live-query-min.js"></script>
+  <script>
+    var { Query, User } = AV;
+    var appId = "MgcNL8gdbvRDCIFGk9N9TQVM-gzGzoHsz";
+    var appKey = "Ohadvb5TXDuIQtP3SdpiEHDO";
+    AV.init({
+      appId: appId,
+      appKey: appKey
+    });
+    var TestObject = AV.Object.extend('TestObject');
+    var testObject = new TestObject();
+    testObject.save({
+      words: 'Hello World!'
+    }).then(function(object) {
+      alert('LeanCloud Rocks!');
+    })
+    // 实时消息服务
+    // var { Realtime, TextMessage } = AV;
+    localStorage.setItem('debug', 'leancloud*,LC*');
+  </script>
 </body>
 </html>
