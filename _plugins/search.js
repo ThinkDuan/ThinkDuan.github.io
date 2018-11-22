@@ -309,7 +309,7 @@ var CONFIG = {
   placeholder: 'Type to search',
   noData: 'No Results!',
   paths: 'auto',
-  depth: 2,
+  depth: 4,
   maxAge: 86400000, // 1 day
   hideOtherSidebarContent: false
 };

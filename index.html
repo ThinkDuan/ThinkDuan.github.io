@@ -15,16 +15,21 @@
     window.$docsify = {
       name: '前端小镇',
       repo: 'https://github.com/ThinkDuan',
-      loadSidebar: true,
+      // logo: './_media/lufei.jpg',
+      loadSidebar: false,
       loadNavbar: true,
       subMaxLevel: 4,
       onlyCover: true,
       coverpage: true,
       auto2top: true,
       search: {
-        maxAge: 86400000,
+        maxAge: 600000,
         placeholder: '搜索文章内容',
-
+        paths: [
+          '/README',
+          '/git/git',
+          '/Javascript/jsOne'
+        ]
       },
       plugins: [
         function (hook,vm){
@@ -35,7 +40,6 @@
                 '</footer>'
               ].join('');
           hook.beforeEach(function (content){
-            console.log(content);
             return content;
           }),
           hook.afterEach(function (html){
@@ -48,7 +52,7 @@
   <script src="./_plugins/external-script.min.js"></script>
   <script src="./_js/docsify.min.js"></script>
   <script src="./_plugins/emoji.min.js"></script>
-  <script src="./_plugins/search.min.js"></script>
+  <script src="./_plugins/search.js"></script>
   <script src="./_plugins/zoom-image.min.js"></script>
   <!-- 存储服务 -->
   <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.0/dist/av-min.js"></script>
@@ -68,7 +72,7 @@
     testObject.save({
       words: 'Hello World!'
     }).then(function(object) {
-      alert('LeanCloud Rocks!');
+      console.log('LeanCloud Rocks!');
     })
     // 实时消息服务
     // var { Realtime, TextMessage } = AV;
