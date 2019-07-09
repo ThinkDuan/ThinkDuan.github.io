@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[LeetCode算法-两数之和]]></title>
+    <url>%2F2018%2F12%2F27%2FLeetCode%E7%AE%97%E6%B3%95-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%2F</url>
+    <content type="text"><![CDATA[第一题: 两数之和给定一个整数数组nums和一个目标值target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例:1234给定 nums = [2, 7, 11, 15], target = 9因为 nums[0] + nums[1] = 2 + 7 = 9所以返回 [0, 1] 代码实现 第一个版本 123456789101112131415function twoSum(nums, target) &#123; let source = []; nums.forEach((item, index, self) =&gt; &#123; let copyNums = JSON.parse(JSON.stringify(self)); copyNums.splice(index, 1); copyNums.forEach((childItem, childIndex) =&gt; &#123; if (childItem + item === target) &#123; if (childIndex + 1 &gt; index) &#123; source.push(index, childIndex + 1) &#125; &#125; &#125;) &#125;); return source;&#125;; 第二个版本 123456789101112function twoSumOptimizeOne(nums, target) &#123; let source = []; let length = nums.length; for(let i = 0;i &lt; length;i++)&#123; for(let j = i+1;j&lt;length;j++)&#123; if(nums[i] + nums[j] === target)&#123; source.push(i,j) &#125; &#125; &#125; return source;&#125;; 第三个版本 12345678910111213141516function twoSumOptimizeTwo(nums, target)&#123; let tempObj = &#123;&#125;; let source = []; nums.forEach((item,index) =&gt; &#123; tempObj[item] = index; &#125;); let length = nums.length; for(let i = 0;i &lt; length;i++)&#123; let j = tempObj[target - nums[i]]; if(j &amp;&amp; j !== i)&#123; source = [i,j]; break; &#125; &#125; return source;&#125;; 第四个版本 1234567891011121314function twoSumOptimizeFinal(nums, target)&#123; let tempObj = new Map(); nums.forEach((item,index) =&gt; &#123; tempObj.set(item,index); &#125;); let length = nums.length; for(let i = 0;i &lt; length;i++)&#123; let j = tempObj.get(target - nums[i]); if(j &amp;&amp; j !== i)&#123; return [i,j]; &#125; &#125;&#125;;module.exports = &#123; twoSum, twoSumOptimizeOne, twoSumOptimizeTwo,twoSumOptimizeFinal&#125;; 目前第四个版本运行效果最好,效率最高]]></content>
+      <categories>
+        <category>LeetCode算法</category>
+      </categories>
+      <tags>
+        <tag>LeetCode算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git版本管理理解]]></title>
+    <url>%2F2018%2F12%2F25%2FGit%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E7%90%86%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[这篇文章主要开说明Git版本控制的理解]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>版本控制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git回滚到特定版本]]></title>
+    <url>%2F2018%2F12%2F25%2FGit%E5%9B%9E%E6%BB%9A%E5%88%B0%E7%89%B9%E5%AE%9A%E7%89%88%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[Git–总会有后悔药吃 1.整个项目回滚1git reset --hard | soft hashId 2.特定某个文件回滚1git reset --hard | soft hashId 文件名字]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo创建文章，标签和分类]]></title>
+    <url>%2F2018%2F09%2F04%2Fhexo%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0%EF%BC%8C%E6%A0%87%E7%AD%BE%E5%92%8C%E5%88%86%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[这篇文章将帮助大家来创建hexo文章,设置文章的标签、分类、评论、阅读更多 1.生成新的文章1hexo new 文章名字 2.配置归档在生成的markdown文件中增加1categories：分类名称 3.配置标签在生成的markdown文件中增加1tags: 标签名称 4.生成阅读更多在生成的markdown文件中增加一些简要的说明文档，在其后增加1&lt;!--more--&gt;]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
