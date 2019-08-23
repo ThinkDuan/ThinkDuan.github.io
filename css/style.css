@@ -19,7 +19,7 @@ html, button, input, select, textarea,
 
 .pure-g {
   padding: 0 50px;
-  padding-top: 90px; }
+  padding-top: 67px; }
 
 body {
   background-color: #FFF;
@@ -59,7 +59,7 @@ div {
 #header {
   position: fixed;
   width: 100%;
-  padding: 20px 50px;
+  padding: 8px 50px;
   text-align: left;
   border-bottom: 1px solid #ddd;
   background-color: #03A9F4;
@@ -81,7 +81,7 @@ div {
     padding: 0;
     position: absolute;
     right: 50px;
-    top: 26px; }
+    top: 16px; }
     #header #nav-menu a {
       display: inline-block;
       padding: 3px 20px 3px;
@@ -351,8 +351,12 @@ div {
 /* for archive page ends*/
 /* middle*/
 @media print, screen and (max-width: 48em) {
+  #header {
+    padding-left: 16px;
+    padding-right: 16px; }
   .pure-g {
-    padding-top: 137px; }
+    padding-top: 137px;
+    padding: 0 16px; }
   .content_container {
     padding-right: 15px; }
   .hidden_mid_and_down {
