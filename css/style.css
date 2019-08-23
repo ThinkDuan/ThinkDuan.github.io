@@ -162,7 +162,8 @@ div {
   color: #888; }
 
 .post {
-  padding: 25px 0 15px; }
+  padding: 15px 0 15px;
+  border-bottom: 1px solid #eee; }
   .post .post-title {
     margin: 0;
     color: #555;
@@ -355,8 +356,8 @@ div {
     padding-left: 16px;
     padding-right: 16px; }
   .pure-g {
-    padding-top: 137px;
-    padding: 0 16px; }
+    padding: 0 16px;
+    padding-top: 114px; }
   .content_container {
     padding-right: 15px; }
   .hidden_mid_and_down {
@@ -738,10 +739,10 @@ pre {
 .readmore a {
   font-size: 14px;
   color: #444;
-  margin: -10px 0;
+  margin: -40px 0;
   padding: 5px 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 4px;
   float: right; }
   .readmore a:after {
     font-family: "FontAwesome";
